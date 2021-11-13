@@ -1,5 +1,5 @@
 
-	 const roles = require('../color-roles.json')[0].roles
+	 const roles = require('../colour-roles.json')[0].roles
 const { MessageEmbed } = require('discord.js')
 module.exports.run = async (client, msg, args) => {
 
@@ -8,7 +8,7 @@ if(!msg.member.permissions.has("ADMINISTRATOR")) return msg.reply('u dont have p
 
     if (!channel) return msg.reply('Invalid arguments, I could not find that channel.')
 
-    msg.channel.send('Now setting up colors in' + channel + ', this may take some time.')
+    msg.channel.send('Now setting up colours in' + channel + ', this may take some time.')
     await channel.send(new MessageEmbed().setImage("https://media.giphy.com/media/WAuU81QWgqIww/giphy.gif").setColor("BLACK"))
 
     let firstEmbed = new MessageEmbed()
@@ -143,11 +143,11 @@ console.log(roles[i])
     }
 
 }
-    msg.channel.send('Successfully set up the reactionroles & colors.')
+    msg.channel.send('Successfully set up the reactionroles & colours.')
 }
 
 
 exports.help = {
-	name:"autocolor",
-	usage:"!autocolor #channel"
+	name:"autocolour",
+	usage:"!autocolour #channel"
 }
