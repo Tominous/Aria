@@ -155,7 +155,7 @@ client.on('message', async (msg) => {
             client.profile.math(`${msg.guild.id}-${msg.author.id}`, '+', points, "levelpoints")
             cooldown.add(`${msg.author.id}-${msg.guild.id}`);
 
-      //client.profile.inc(`${msg.guild.id}-${msg.author.id}`, "levelpoints")
+      client.profile.inc(`${msg.guild.id}-${msg.author.id}`, "levelpoints")
   
       setTimeout(() => {
           cooldown.delete(`${msg.author.id}-${msg.guild.id}`)
